@@ -96,3 +96,11 @@ This project provides **real-time, AI-powered tracking and analysis** of wrist a
 
 Special thanks to **MediaPipe**, **OpenCV**, and **Matplotlib** for enabling real-time hand tracking and visualization.  
 This project is designed for clinical rehabilitation, providing **accessible, quantitative feedback** for hand therapy.
+
+---
+
+## Contact Us for Improvements
+1. **Bhargavi** - bhargavijn24@gmail.com
+2. **Akash** - venkatasaiakash.arvapalli@gmail.com
+
+---
