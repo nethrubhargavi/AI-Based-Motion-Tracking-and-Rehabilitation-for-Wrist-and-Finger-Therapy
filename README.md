@@ -26,3 +26,7 @@ This application uses **Flask**, **OpenCV**, and **MediaPipe** to provide real-t
 - **Computer Vision**: OpenCV, MediaPipe[2]
 - **Data Analysis**: pandas, Matplotlib[2]
 - **Frontend**: HTML, basic Jinja2 templating[1][3]
+
+## Installation & Usage
+
+1. **Clone the repository**:  https://github.com/nethrubhargavi/AI-Based-Motion-Tracking-and-Rehabilitation-for-Wrist-and-Finger-Therapy.git
