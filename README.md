@@ -89,12 +89,6 @@ This project provides **real-time, AI-powered tracking and analysis** of wrist a
 
 ---
 
-## Contributing
-
-Contributions are welcome! Please open an issue or submit a pull request.
-
----
-
 ## Acknowledgments
 
 Special thanks to **MediaPipe**, **OpenCV**, and **Matplotlib** for enabling real-time hand tracking and visualization.  
