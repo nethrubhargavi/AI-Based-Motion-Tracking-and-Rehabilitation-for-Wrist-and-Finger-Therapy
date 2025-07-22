@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Live Hand Tracking</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='live.css') }}">
+</head>
+<body>
+    <div class="container fade-in">
+        <h1 class="title">Live Hand Tracking</h1>
+        <div class="video-row">
+            <div class="video-col">
+                <h3>Demo Video</h3>
+                <div class="video-frame">
+                    <video width="400" height="300" controls loop>
+                        <source src="{{ url_for('static', filename='demo.mp4') }}" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+            <div class="video-col">
+                <h3>Your Video</h3>
+                <div class="video-frame">
+                    <img src="{{ url_for('video_feed_processed') }}" width="400" height="300" class="video-anim">
+                </div>
+            </div>
+        </div>
+        <div class="feedback bounce-in" id="feedbackDisplay">Loading feedback...</div>
+        <form action="{{ url_for('end') }}" method="post">
+            <button class="btn-anim" type="submit">End</button>
+        </form>
+        <script>
+            function updateFeedback() {
+                fetch('/feedback')
+                    .then(response => response.json())
+                    .then(data => {
+                        document.getElementById('feedbackDisplay').textContent = data.message;
+                    });
+            }
+            setInterval(updateFeedback, 10000);
+            updateFeedback();
+        </script>
+    </div>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hand Tracking App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
+    <script>
+        function toggleLogs() {
+            var wrapper = document.getElementById('logs-wrapper');
+            var btn = document.getElementById('logs-btn');
+            if (wrapper.style.maxHeight === '0px' || wrapper.style.maxHeight === '') {
+                wrapper.style.maxHeight = '1000px';
+                btn.textContent = 'Hide Logs';
+            } else {
+                wrapper.style.maxHeight = '0px';
+                btn.textContent = 'Show Logs';
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="container fade-in">
+        <div class="center-btn">
+            <h1 class="title">Hand Tracking App</h1>
+        </div>
+        
+        <form action="{{ url_for('start') }}" method="post" class="start-form">
+            <input type="text" name="session_name" placeholder="Enter session name" required class="input-anim">
+            <button class="btn-anim" type="submit">Start</button>
+        </form>
+        <div class="center-btn">
+            <button class="btn-anim" id="logs-btn" onclick="toggleLogs()" type="button">Show Logs</button>
+        </div>
+        <div class="logs-wrapper" id="logs-wrapper" style="max-height: 0px;">
+            <h2 class="subtitle">Previous Sessions</h2>
+            <table class="session-table">
+                <tr>
+                    <th>Session</th>
+                    <th>Excel</th>
+                    <th>Plots PDF</th>
+                    <th>Summary PDF</th>
+                </tr>
+                {% for s in sessions %}
+                <tr>
+                    <td>{{ s.name }}</td>
+                    <td>{% if s.excel %}<a href="{{ url_for('download', filetype='excel', session_name=s.name) }}">Excel</a>{% endif %}</td>
+                    <td>{% if s.plots_pdf %}<a href="{{ url_for('download', filetype='plots_pdf', session_name=s.name) }}">Plots</a>{% endif %}</td>
+                    <td>{% if s.summary_pdf %}<a href="{{ url_for('download', filetype='summary_pdf', session_name=s.name) }}">Summary</a>{% endif %}</td>
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+    </div>
+</body>
+</html>
