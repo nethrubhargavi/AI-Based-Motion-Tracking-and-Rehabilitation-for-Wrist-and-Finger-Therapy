@@ -94,12 +94,6 @@ Contributions are welcome! Please open an issue or submit a pull request.
 
 ---
 
-## License
-
-MIT License.
-
----
-
 ## Acknowledgments
 
 Special thanks to **MediaPipe**, **OpenCV**, and **Matplotlib** for enabling real-time hand tracking and visualization.  
