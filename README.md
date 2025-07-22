@@ -46,16 +46,16 @@ This project provides **real-time, AI-powered tracking and analysis** of wrist a
     ```bash git clone https://github.com/your-username/AI-Based-Motion-Tracking-and-Rehabilitation-for-Wrist-and-Finger-Therapy.git```
    ```cd AI-Based-Motion-Tracking-and-Rehabilitation-for-Wrist-and-Finger-Therapy```
    
-2. ## (Optional) Create a virtual environment
+2. **(Optional) Create a virtual environment**
     ```python -m venv venv```
     ```source venv/bin/activate```
     ```# On Windows: venv\Scripts\activate```
 
-Install dependencies
-pip install -r requirements.txt
+3. **Install dependencies**
+    ```pip install -r requirements.txt```
 
-Run the application
-python app.py
+4. **Run the application**
+    ```python app.py```
 
 Visit `http://127.0.0.1:5000` in your browser to start.
 
