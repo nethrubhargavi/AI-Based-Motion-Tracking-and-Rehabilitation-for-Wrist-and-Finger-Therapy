@@ -1,28 +1,28 @@
-# AI-Based-Motion-Tracking-and-Rehabilitation-for-Wrist-and-Finger-Therapy
+# AI-Based Motion Tracking and Rehabilitation for Wrist and Finger Therapy
 
-This repository contains a Flask-based web application that leverages MediaPipe for real-time hand tracking to assist with wrist and finger rehabilitation therapy. The system tracks joint angles, wrist flexion/extension, and finger opposition, providing automated feedback and detailed session analytics for patients and clinicians.
+## Project Description
 
+This application uses **Flask**, **OpenCV**, and **MediaPipe** to provide real-time, AI-driven hand tracking for wrist and finger rehabilitation. It captures video from your webcam, analyzes hand and finger movements, and provides quantitative feedback on joint angles, flexion/extension, finger opposition, and fist clenching—essential metrics for physical therapy. After each session, it generates downloadable reports (Excel, PDF) for patients and clinicians.
 
-#✨ **Features**
-1. Real-time hand and finger tracking: Uses webcam input to monitor wrist and finger movements during exercises.
+## Features
 
-2. Comprehensive metrics: Measures wrist flexion/extension, finger joint angles (PIP, DIP, CMC, MCP), thumb opposition distances, and fist clench dynamics.
+- **Real-time hand & finger tracking** using MediaPipe’s advanced pose estimation[2].
+- **Quantitative metrics**: Wrist flexion/extension, radial/ulnar deviation, thumb and finger joint angles (CMC, MCP, IP, PIP, DIP), thumb-finger opposition distances, and fist clench metrics[2].
+- **Automated feedback**: Encouragement and form prompts based on movement quality[2].
+- **Session recording**: Every session is stored with detailed time-series data and downloadable reports (Excel, plots PDF, summary PDF)[1][2].
+- **Web interface**: Accessible via browser for both patients and clinicians[1][3].
+- **Privacy**: All data is stored locally; no patient information is transmitted.
 
-3. Automated feedback: Provides real-time encouragement and corrective prompts based on movement quality.
+## How It Works
 
-4. Session recording & analytics: Saves each therapy session with detailed time-series data, plots, and summary statistics (Excel, PDF).
+- **Start** a session via the web interface (optionally naming it)[1].
+- **Perform** therapy exercises while the app tracks joint angles and provides feedback in real time[2].
+- **End** the session to automatically generate downloadable reports showing detailed analytics and summary statistics[1][2].
+- **View session history** and download previous reports from the home screen[1][3].
 
-5. Responsive web interface: Accessible via browser with session history and downloadable reports.
+## Tech Stack
 
-6. Configurable for clinical use: Normal joint ranges and validation rules are integrated for wrist and finger rehabilitation protocols.
-
-
-Tech Stack
-Backend: Python, Flask
-
-Computer Vision: OpenCV, MediaPipe
-
-Data Analysis & Visualization: pandas, Matplotlib
-
-Frontend: HTML, Jinja2 (lightweight templating)
-
+- **Backend**: Python, Flask[1]
+- **Computer Vision**: OpenCV, MediaPipe[2]
+- **Data Analysis**: pandas, Matplotlib[2]
+- **Frontend**: HTML, basic Jinja2 templating[1][3]
